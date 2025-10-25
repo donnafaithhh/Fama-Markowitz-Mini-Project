@@ -1,4 +1,4 @@
-# Fama-Markowitz-Mini-Project
+# A Comparison of Portfolios From the Markowitz Portfolio Optimization and the Fama-French Three-Factor Model
 
 ## Context
 Multi-factor modelling is a popular way to analyze the performance of a portfolio using specific characteristics (also called factors). 
