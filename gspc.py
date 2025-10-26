@@ -1,4 +1,4 @@
-import yfinance
+import yfinance as yf
 import pandas as pd
 import time
 import pickle
@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import math
 
 # getting closing prices for the 30 stocks with batching
-start_date = '2019-08-31'
+start_date = '2020-08-31'
 end_date = '2022-08-31'
 
 def download_stocks_in_batches(tickers, batch_size=5, delay=1):
