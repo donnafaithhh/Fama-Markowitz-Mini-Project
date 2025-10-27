@@ -27,4 +27,39 @@ We based our methodology on two papers:
 2. L. Molero-González et al. (2023)
          - With the Onatski test, they concluded that the presence of only one factor, Market factor,  is significant.
 
+## Goals
+### Basic Goal: Compare the Fama-French three-factor model and the Markowitz Portfolio Optimization 
+Plan:
+1. Data Gathering
+    - We randomly chose 30 firms from the S&P 500.
+    - Using the yfinance API, gathered information on the closing prices of the stocks from August 31, 2022 until August 31, 2025.
+    - We turned the closing prices into two matrices to be used later on:
+        - Simple returns
+        - Log returns
+2. Implement the PCA Portfolio Optimization
+    - Apply PCA on normalized, simple returns
+    - Get the portfolio that corresponds to PC1
+3. Implement the Fama French Portfolio Optimization
+    - Get the excess returns from simple returns
+    - Get the residuals of the excess returns
+    - Get the covariance matrix
+    - Get the portfolio that minimizes idiosyncratic risk
+4. Compare PCA and Fama-French portfolio optimization to the efficient frontier.
+    - Plot random portfolios. 
+    - Compare the Sharpe Ratios.
+
+### Intermediate Goal:  Integrate rotationally invariant estimators (RIE) in the Markowitz Portfolio
+Plan:
+1. Implement RIE Markowitz optimization and filter for the relevant eigenvectors.
+    - Implement RIE Markowitz optimization 
+    - Get the significant eigenvectors using the Machenco-Pastur distribution.
+
+### Advanced Goal: Integrate RMT within the fama-french factor model
+Plan:
+As per the study done by Molero-Gonzales et al., (2023), the steps we will follow are the ff:
+1. Identify significant factors through the Onatski Test.
+    - Split a time series to construct a complex matrix.
+    - Compute the eigenvalues
+    - Compute the test statistic 
+2. Check at different significance levels (0.01, 0.05, 0.1).
 
